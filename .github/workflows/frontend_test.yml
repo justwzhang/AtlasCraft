@@ -42,6 +42,7 @@ jobs:
       - name: Run Cypress tests
         uses: cypress-io/github-action@v2 # Use the official Cypress GitHub Action
         with:
+          working-directory: Top5Lister/client
           browser: chrome # Use Chrome browser for testing
           record: true # Record test results on the Cypress Dashboard
           spec: Top5Lister/client/cypress/e2e/spec.cy.js # Specify the path to your test script
