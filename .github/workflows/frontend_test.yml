@@ -42,4 +42,4 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
-          spec: Top5Lister/client/cypress/e2e/spec1.js
+          project: ./Top5Lister/client
