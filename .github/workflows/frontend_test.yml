@@ -8,9 +8,9 @@ on: [push]
   #     - main
   #   pull_request:
 
-# defaults:
-#   run:
-#     working-directory: ./Top5Lister/client
+defaults:
+  run:
+    working-directory: ./Top5Lister/client
 
 
 permissions:
