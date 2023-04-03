@@ -15,6 +15,7 @@ app.use(
   cors({
     origin: [
       'http://64.227.29.95',
+      'https://top5lister.onrender.com',
       'http://localhost:3000',
       'https://urchin-app-zt4cv.ondigitalocean.app',
     ],
@@ -34,3 +35,5 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 // PUT THE SERVER IN LISTENING MODE
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+module.exports = app;
