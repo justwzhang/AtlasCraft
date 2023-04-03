@@ -18,10 +18,13 @@
 		"react-scripts": "^5.0.1",
 		"web-vitals": "^1.1.2"
 	},
+	"devDependencies": {
+		"cypress": "^12.9.0"
+	},
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",
-		"test": "react-scripts test",
+		"test": "cypress open",
 		"eject": "react-scripts eject"
 	},
 	"eslintConfig": {
