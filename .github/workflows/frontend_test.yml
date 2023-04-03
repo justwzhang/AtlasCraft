@@ -38,8 +38,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Install dependencies
-        run: cd Top5Lister/client && npm install # Change to the client directory and install dependencies
+        run: npm install # Change to the client directory and install dependencies
+        # run: cd Top5Lister/client && npm install # Change to the client directory and install dependencies
       - name: Cypress run
         uses: cypress-io/github-action@v5
-        with:
-          project: ./Top5Lister/client
+        # with:
+        #   project: ./Top5Lister/client
