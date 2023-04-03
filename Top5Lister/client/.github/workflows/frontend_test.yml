@@ -8,9 +8,9 @@ on: [push]
   #     - main
   #   pull_request:
 
-defaults:
-  run:
-    working-directory: ./Top5Lister/client
+# defaults:
+#   run:
+#     working-directory: ./Top5Lister/client
 
 
 permissions:
@@ -26,6 +26,6 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
-          cd: cd ./Top5Lister/client
+          # cd: cd ./Top5Lister/client
           build: npm run build
           start: npm start
