@@ -38,11 +38,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2 # Checkout the latest code from the repository
       - name: Install dependencies
-        run: cd Top5Lister/client && npm install # Change to the client folder and install dependencies
+        run: cd Top5Lister/client && npm install # Change to the client directory and install dependencies
       - name: Run Cypress tests
         uses: cypress-io/github-action@v2 # Use the official Cypress GitHub Action
         with:
           browser: chrome # Use Chrome browser for testing
           record: true # Record test results on the Cypress Dashboard
-          start: npm start # Start the client app before running tests
-          spec: cypress/integration/spec.cy.js # Specify the path to your test script
+          spec: Top5Lister/client/cypress/e2e/spec.cy.js # Specify the path to your test script
