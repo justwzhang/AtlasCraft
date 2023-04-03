@@ -8,23 +8,23 @@ on: [push]
   #     - main
   #   pull_request:
 
-  defaults:
+defaults:
   run:
     working-directory: ./Top5Lister/client
 
 
-  permissions:
-    contents: read
-    pull-requests: read
-  
-  jobs:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+permissions:
+  contents: read
+  pull-requests: read
 
-      - name: Cypress run
-        uses: cypress-io/github-action@v5
-        with:
-          build: npm run build
-          start: npm start
+jobs:
+  runs-on: ubuntu-latest
+  steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Cypress run
+      uses: cypress-io/github-action@v5
+      with:
+        build: npm run build
+        start: npm start
