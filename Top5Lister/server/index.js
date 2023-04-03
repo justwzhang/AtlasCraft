@@ -30,10 +30,10 @@ const top5listsRouter = require('./routes/top5lists-router');
 app.use('/api', top5listsRouter);
 
 // INITIALIZE OUR DATABASE OBJECT
-const db = require('./db');
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+const connectDB = require('./db');
+connectDB();
 
 // PUT THE SERVER IN LISTENING MODE
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+const server = app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
-module.exports = app;
+module.exports = { app, server };
