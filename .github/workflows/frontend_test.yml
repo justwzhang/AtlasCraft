@@ -30,35 +30,14 @@
 #           build: npm run build
 #           start: npm start
 name: Frontend Test Workflow
-on: push # Run this workflow whenever a push occurs
+on: push
 jobs:
-  cypress-tests:
-    runs-on: ubuntu-latest
+  cypress-run:
+    runs-on: ubuntu-22.04
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      # - name: Setup Node.js
-      #   uses: actions/setup-node@v2.4.2
-      #   with:
-      #     node-version: '14.x'
-
-      - name: Install dependencies
-        run: npm install
-        working-directory: ./Top5Lister/client
-
-      - name: Start server
-        run: npm test
-        working-directory: ./Top5Lister/client
-
-      # - name: Wait for server to start
-      #   run: |
-      #     npx wait-on http://localhost:3000
-      #   working-directory: ./Top5Lister/client
-
-      - name: Run Cypress tests
-        uses: cypress-io/github-action@v2
-        with:
-          browser: chrome
-          # start: npm start
-          # wait-on: 'http://localhost:3000'
+      - name: Checkout
+        uses: actions/checkout@v3
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run
+        uses: cypress-io/github-action@v5
