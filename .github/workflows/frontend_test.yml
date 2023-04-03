@@ -41,4 +41,5 @@ jobs:
         run: cd Top5Lister/client && npm install # Change to the client directory and install dependencies
       - name: Cypress run
         uses: cypress-io/github-action@v5
-        working-directory: Top5Lister/client
+        with:
+          spec: Top5Lister/client/cypress/e2e/spec1.js
