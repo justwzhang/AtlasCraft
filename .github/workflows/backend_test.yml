@@ -12,4 +12,4 @@ jobs:
     - name: Run Jest
       uses: stefanoeb/jest-action@1.0.3
       with:
-        jestArgs: ./server/__tests__/userRoutes.test.js # change this to the correct path
+        jestArgs: ../Top5Lister/server/__tests__/userRoutes.test.js # change this to the correct path
