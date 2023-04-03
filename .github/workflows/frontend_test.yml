@@ -40,7 +40,7 @@ jobs:
       - name: Install dependencies
         run: cd Top5Lister/client && npm install # Change to the client directory and install dependencies
       - name: Run Cypress tests
-        uses: cypress-io/github-action@v2 # Use the official Cypress GitHub Action
+        uses: cypress-io/github-action@v2.2.7 # Use the official Cypress GitHub Action
         with:
           working-directory: Top5Lister/client
           browser: chrome # Use Chrome browser for testing
