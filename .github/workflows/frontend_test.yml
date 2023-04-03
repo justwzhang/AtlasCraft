@@ -44,4 +44,5 @@ jobs:
         with:
           browser: chrome # Use Chrome browser for testing
           record: true # Record test results on the Cypress Dashboard
+          start: npm start # Start the client app before running tests
           spec: cypress/integration/spec.cy.js # Specify the path to your test script
